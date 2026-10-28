@@ -109,12 +109,14 @@ Règle : ne **jamais** modifier la vérité terrain pour faire passer un test.
 
 ## Limites connues
 
-- Deux échantillons d'une page chacun : un lycée et un collège. Il manque encore un PDF de plusieurs pages réel.
+- Deux échantillons d'une page chacun (exports annuels) : un lycée et un collège. Le multi-pages (export de plusieurs semaines) n'est testé que sur des PDF synthétiques.
 - Le PDF annuel donne l'emploi du temps type, avec les profs titulaires : les remplacements ponctuels (affichés sur l'écran de la semaine dans PRONOTE) n'y figurent pas.
-- Les deux cours du lundi après-midi (Physique-Chimie 14:10–15:45, SVT 15:45–17:15) ont un horaire **interpolé**, à confirmer dans PRONOTE. Si l'heure réelle diffère, il faut corriger la vérité terrain **et** l'algorithme.
+- Les horaires interpolés restent signalés (`horaire_estime`). Sur `noam.pdf`, les deux cours concernés (Physique-Chimie 14:10–15:45, SVT 15:45–17:15) ont été confirmés dans PRONOTE le 2026-10-29.
 - Le sens du pictogramme est inconnu.
 - Les PDF scannés sont rejetés (`no_grid`).
-- Il faut ajouter d'autres PDF (autres établissements, plusieurs pages), chacun vérifié à la main.
+- Il faut ajouter d'autres PDF (autres établissements), chacun vérifié à la main.
+
+La spécification de référence est [`docs/spec.md`](docs/spec.md).
 
 ## Intégration (hors de ce repo)
 

@@ -50,3 +50,23 @@ def test_cli_unsupported(tmp_path, capsys):
     f.write_text("bonjour")
     assert main([str(f)]) == 1
     assert json.loads(capsys.readouterr().err)["error"] == "unsupported_type"
+
+
+def test_cli_contract_errors(tmp_path, capsys):
+    """Contrat lu par le backend : code 1 et {"error", "detail"} sur stderr, rien sur stdout."""
+    from pdfgen import make_pdf
+    cases = {"no_grid": make_pdf([[("text", 50, 50, "Document scanne", 10)]]),
+             "invalid_file": b"%PDF-1.4\ncorrompu",
+             "unsupported_type": b"\x89PNG\r\n\x1a\nimage"}
+    for code, data in cases.items():
+        f = tmp_path / f"{code}.pdf"
+        f.write_bytes(data)
+        assert main([str(f)]) == 1
+        out = capsys.readouterr()
+        assert out.out == ""
+        err = json.loads(out.err)
+        assert err["error"] == code and err["detail"]
+
+
+def test_cli_usage(capsys):
+    assert main([]) == 2

@@ -4,7 +4,7 @@ Remplace la spec v2 (PDF + capture d'écran). **La voie capture d'écran est aba
 
 ## 1. Objectif
 
-Transformer un **emploi du temps PRONOTE exporté en PDF** en **JSON structuré fiable**, consommé par une app Flutter via un backend NestJS.
+Transformer un **emploi du temps PRONOTE exporté en PDF** en **JSON structuré fiable**, consommé par une app Flutter via le backend Go (Airswop).
 
 Le PDF PRONOTE est vectoriel : le texte et les rectangles sont lus directement, sans OCR. L'iCal PRONOTE, quand l'établissement l'active, reste la meilleure source ; il est hors périmètre et traité directement par l'app.
 
@@ -18,13 +18,14 @@ Plancher de fiabilité : les deux golden tests (§8) passent, en égalité stric
 | Langage | **Python 3.12** + `pdfplumber` | Caractères, mots, rectangles, couleurs, dédoublonnage du gras simulé, PDF chiffrés RC4 sans mot de passe |
 | Approche | Géométrie déterministe, jamais devinée | Fiabilité, testabilité |
 | Pas de LLM | Aucun appel LLM | Déterminisme, coût nul |
-| Déploiement | FastAPI, **sans Docker** : venv uv, lancé par systemd | Appelé en interne par NestJS ; Flutter ne parle qu'à NestJS |
+| Intégration | **Commande** (`python -m pronote_extractor <fichier>`) lancée par le backend Go ; pas de service HTTP | Rien à faire tourner en permanence ; ~0,5 s par import, démarrage compris (décision du 2026-10-29, NestJS abandonné) |
+| Déploiement | **Sans Docker** : venv uv installé à côté du backend | Flutter ne parle qu'au backend Go |
 
 ## 3. Architecture
 
 ```
-Flutter ──(PDF)──► NestJS ──(HTTP interne)──► pronote-extractor (FastAPI + pdfplumber)
-Flutter ◄── JSON + warnings ─────────────────┘
+Flutter ──(PDF)──► backend Go ──(lance)──► python -m pronote_extractor <fichier>   (pdfplumber)
+Flutter ◄── JSON + warnings ───┘ ◄── stdout (JSON) / stderr (refus) ──┘
 Flutter : écran de validation (cours en warning et horaires estimés surlignés) → enregistrement
 ```
 
@@ -37,14 +38,12 @@ pronote-extractor/
 ├── pyproject.toml, uv.lock, README.md
 ├── docs/spec.md                      # ce document
 ├── scripts/install.sh                # uv + uv sync ; aucune dépendance système
-├── scripts/pronote-extractor.service # systemd
 ├── src/pronote_extractor/
 │   ├── schema.py     # modèle de sortie (dataclasses)
 │   ├── detect.py     # signature PDF
 │   ├── errors.py     # ExtractionError(code, detail)
 │   ├── pdf/extract.py, pdf/parse.py
-│   ├── api.py        # FastAPI
-│   └── cli.py        # python -m pronote_extractor edt.pdf
+│   └── cli.py        # python -m pronote_extractor edt.pdf (interface lue par le backend)
 └── tests/
     ├── fixtures/noam.pdf + noam.expected.json      # lycée, quinzaines Q1/Q2
     ├── fixtures/gounod.pdf + gounod.expected.json  # collège, semaines A/B
@@ -102,21 +101,24 @@ pronote-extractor/
 10. **Fusion** : même cours (jour, matière, profs, groupe, salles, quinzaine) sur deux cases dont `fin == debut`. Deux cours séparés par une récréation restent deux entrées. La fusion ne franchit pas les pages.
 11. **Multi-pages** : chaque page est traitée séparément. Une page sans grille est ignorée avec un warning ; si aucune page n'a de grille → `no_grid`. Dans un PDF de plusieurs pages, les warnings sont préfixés par `page N : `.
 
-## 7. API
+## 7. Interface (commande)
 
-- `POST /extract` — `multipart/form-data`, champ `file` (PDF, ≤ 10 Mo) → `200` + modèle du §5.
-- Erreurs `{"error": <code>, "detail": <texte>}` :
+`python -I -m pronote_extractor <fichier>` :
 
-| Statut | `error` | Cas |
-|---|---|---|
-| 422 | `unsupported_type` | pas un PDF (image, texte…) |
-| 422 | `invalid_file` | PDF corrompu |
-| 422 | `no_grid` | aucune page avec rectangles, en-têtes de jours et libellés horaires (PDF scanné) |
-| 413 | `too_large` | > 10 Mo |
+| Code de sortie | Sortie |
+|---|---|
+| `0` | modèle du §5 en JSON sur stdout |
+| `1` | refus : `{"error": <code>, "detail": <texte>}` sur stderr, stdout vide |
+| `2` | mauvais usage |
+| autre | plantage (trace Python sur stderr) |
 
-- `GET /health` → `{"ok": true, "pdfplumber": "<version>"}`.
+| `error` | Cas |
+|---|---|
+| `unsupported_type` | pas un PDF (image, texte…) |
+| `invalid_file` | PDF corrompu |
+| `no_grid` | aucune page avec rectangles, en-têtes de jours et libellés horaires (PDF scanné) |
 
-Warnings : `"<jour> <HH:MM> … : case à cheval sur un créneau, horaire interpolé"`, `"<jour> <HH:MM> : aucun prof lu"`, `"page N : pas de grille d'emploi du temps, ignorée"`.
+La taille maximale et le délai relèvent du backend. Warnings : `"<jour> <HH:MM> … : case à cheval sur un créneau, horaire interpolé"`, `"<jour> <HH:MM> : aucun prof lu"`, `"page N : pas de grille d'emploi du temps, ignorée"`.
 
 ## 8. Tests (verts en permanence)
 
@@ -126,7 +128,7 @@ Warnings : `"<jour> <HH:MM> … : case à cheval sur un créneau, horaire interp
 | `gounod.pdf` | idem avec `gounod.expected.json` (transcrit à la main, validé le 2026-10-28) ; aucun warning |
 | prototype de référence | le package reproduit sa sortie sur `noam.pdf` |
 | PDF synthétiques | samedi, multi-pages, page sans grille, `no_grid`, PDF corrompu, marqueur de semaine (avec et sans cadre), séparateurs de salles, interpolation (géométrie réelle → 15:45 ; milieu exact → 15:50) |
-| détection / API | PDF renommé `.png` traité comme PDF ; texte, PNG, JPEG → `unsupported_type` ; toutes les erreurs HTTP |
+| détection / commande | PDF renommé `.png` traité comme PDF ; texte, PNG, JPEG → `unsupported_type` ; codes de sortie et erreurs JSON sur stderr |
 
 ## 9. Règles à ne pas casser
 
@@ -139,7 +141,7 @@ Warnings : `"<jour> <HH:MM> … : case à cheval sur un créneau, horaire interp
 
 ## 10. Intégration (hors de ce dépôt)
 
-- **NestJS** : `POST /timetable/import` relaie le PDF vers `pronote-extractor` (timeout 30 s). Les erreurs 422/413 sont renvoyées telles quelles à l'app.
+- **Backend Go (Airswop)** : `POST /api/v1/timetable/import` (clé d'API, multipart, champ `file`) lance la commande (`TIMETABLE_PYTHON`, délai `TIMETABLE_TIMEOUT` 30 s, taille `TIMETABLE_MAX_BYTES` 10 Mo) et traduit les refus en codes HTTP (`NOT_A_PDF`, `INVALID_PDF`, `NO_TIMETABLE` → 422 ; 413 ; 504).
 - **Flutter** : modèle `Lesson` aligné sur le §5 ; écran de validation surlignant les cours en warning et ceux en `horaire_estime: true`, avec édition de chaque champ avant enregistrement ; filtre d'alternance sur les libellés présents dans la réponse (`Q1`/`Q2`, `A`/`B`) ; table de libellés lisibles côté app. Ordre proposé : lien iCal, sinon export PDF.
 
 ## 11. Limites connues

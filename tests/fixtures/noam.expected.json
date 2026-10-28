@@ -1,0 +1,602 @@
+{
+ "etablissement": "LYCEE GUSTAVE EIFFEL",
+ "creneaux": [
+  "08:05",
+  "09:05",
+  "10:00",
+  "10:15",
+  "11:15",
+  "12:15",
+  "13:10",
+  "14:10",
+  "15:05",
+  "15:20",
+  "16:15",
+  "17:15",
+  "18:15"
+ ],
+ "cours": [
+  {
+   "jour": "lundi",
+   "debut": "08:05",
+   "fin": "09:05",
+   "matiere": "ANGLAIS LV SECTION",
+   "profs": [
+    "MARINHO A."
+   ],
+   "groupe": "2GT1 EURO",
+   "salles": [
+    "G13"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "lundi",
+   "debut": "09:05",
+   "fin": "10:00",
+   "matiere": "PHYSIQUE-CHIMIE",
+   "profs": [
+    "BARD EL HAL S."
+   ],
+   "groupe": null,
+   "salles": [
+    "G 4"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "lundi",
+   "debut": "10:15",
+   "fin": "11:15",
+   "matiere": "ATELIER TRAVAIL PERSONEL",
+   "profs": [
+    "CHENAFI A."
+   ],
+   "groupe": "2GT1ATP",
+   "salles": [
+    "C 7",
+    "C 8"
+   ],
+   "quinzaine": null,
+   "pictogramme": true,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "lundi",
+   "debut": "11:15",
+   "fin": "12:15",
+   "matiere": "HIST.GEO.EN.MOR.CIV.",
+   "profs": [
+    "CARCANAGUE M."
+   ],
+   "groupe": null,
+   "salles": [
+    "A 15"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "lundi",
+   "debut": "13:10",
+   "fin": "14:10",
+   "matiere": "AP FRANCAIS",
+   "profs": [
+    "DE CARVALHO MARTINS M."
+   ],
+   "groupe": "2GT1AP FRA",
+   "salles": [
+    "G 1"
+   ],
+   "quinzaine": "Q1",
+   "pictogramme": true,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "13:10",
+   "fin": "14:10",
+   "matiere": "AP FRANCAIS",
+   "profs": [
+    "DE CARVALHO MARTINS M."
+   ],
+   "groupe": "2GT1AP FRA_1",
+   "salles": [
+    "G 1"
+   ],
+   "quinzaine": "Q2",
+   "pictogramme": true,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "14:10",
+   "fin": "15:45",
+   "matiere": "PHYSIQUE-CHIMIE",
+   "profs": [
+    "BARD EL HAL S."
+   ],
+   "groupe": "2GT1 G1",
+   "salles": [
+    "C 5 pro"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": true,
+   "demi_case": false
+  },
+  {
+   "jour": "lundi",
+   "debut": "15:45",
+   "fin": "17:15",
+   "matiere": "SCIENCES VIE & TERRE",
+   "profs": [
+    "CHENAFI A."
+   ],
+   "groupe": "2GT1 G1",
+   "salles": [
+    "C 7",
+    "C 8"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": true,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "08:05",
+   "fin": "09:05",
+   "matiere": "HIST.GEO.EN.MOR.CIV.",
+   "profs": [
+    "CARCANAGUE M."
+   ],
+   "groupe": null,
+   "salles": [
+    "A 15"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "09:05",
+   "fin": "10:00",
+   "matiere": "ANGLAIS LV1",
+   "profs": [
+    "BRUNNER M."
+   ],
+   "groupe": "ANG 2GT GP1",
+   "salles": [
+    "B 2"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "10:15",
+   "fin": "12:15",
+   "matiere": "ED.PHYSIQUE & SPORT.",
+   "profs": [
+    "FRAYSSE C."
+   ],
+   "groupe": null,
+   "salles": [],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "13:10",
+   "fin": "14:10",
+   "matiere": "PHYSIQUE-CHIMIE",
+   "profs": [
+    "BARD EL HAL S."
+   ],
+   "groupe": null,
+   "salles": [
+    "G11"
+   ],
+   "quinzaine": "Q1",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "mardi",
+   "debut": "14:10",
+   "fin": "15:05",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "DE CARVALHO MARTINS M."
+   ],
+   "groupe": null,
+   "salles": [
+    "G 1"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "15:20",
+   "fin": "16:15",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "DE CARVALHO MARTINS M."
+   ],
+   "groupe": null,
+   "salles": [
+    "G 1"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "16:15",
+   "fin": "17:15",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "SANCANDI C."
+   ],
+   "groupe": null,
+   "salles": [
+    "C 13"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mercredi",
+   "debut": "08:05",
+   "fin": "10:00",
+   "matiere": "ALLEMAND LV2",
+   "profs": [
+    "FOUQUERAY M."
+   ],
+   "groupe": "2GT1_ALLEMAND",
+   "salles": [
+    "G 2"
+   ],
+   "quinzaine": "Q2",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "mercredi",
+   "debut": "10:15",
+   "fin": "11:15",
+   "matiere": "ALLEMAND LV2",
+   "profs": [
+    "FOUQUERAY M."
+   ],
+   "groupe": "2GT1_ALLEMAND",
+   "salles": [
+    "G 2"
+   ],
+   "quinzaine": "Q1",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "mercredi",
+   "debut": "10:15",
+   "fin": "11:15",
+   "matiere": "SC. ECONO.& SOCIALES",
+   "profs": [
+    "DURAND A."
+   ],
+   "groupe": null,
+   "salles": [
+    "B 2"
+   ],
+   "quinzaine": "Q2",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "mercredi",
+   "debut": "11:15",
+   "fin": "12:15",
+   "matiere": "SC. ECONO.& SOCIALES",
+   "profs": [
+    "DURAND A."
+   ],
+   "groupe": null,
+   "salles": [
+    "B 2"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mercredi",
+   "debut": "12:15",
+   "fin": "13:10",
+   "matiere": "SC.NUMERIQ.TECHNOL.",
+   "profs": [
+    "DE SIMONE K."
+   ],
+   "groupe": null,
+   "salles": [
+    "C 14"
+   ],
+   "quinzaine": "Q1",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "mercredi",
+   "debut": "12:15",
+   "fin": "13:10",
+   "matiere": "SC.NUMERIQ.TECHNOL.",
+   "profs": [
+    "DE SIMONE K."
+   ],
+   "groupe": "2GT1 G1",
+   "salles": [
+    "C 14"
+   ],
+   "quinzaine": "Q2",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "jeudi",
+   "debut": "08:05",
+   "fin": "09:05",
+   "matiere": "ANGLAIS LV1",
+   "profs": [
+    "BRUNNER M."
+   ],
+   "groupe": "ANG 2GT GP1",
+   "salles": [
+    "C 13"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "09:05",
+   "fin": "10:00",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "SANCANDI C."
+   ],
+   "groupe": "2GT1 G1",
+   "salles": [
+    "C 5 pro"
+   ],
+   "quinzaine": "Q1",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "jeudi",
+   "debut": "09:05",
+   "fin": "10:00",
+   "matiere": "HIST.GEO.EN.MOR.CIV.",
+   "profs": [
+    "CARCANAGUE M."
+   ],
+   "groupe": "2GT1 G1",
+   "salles": [
+    "A 15"
+   ],
+   "quinzaine": "Q2",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "jeudi",
+   "debut": "10:15",
+   "fin": "11:15",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "DE CARVALHO MARTINS M."
+   ],
+   "groupe": null,
+   "salles": [
+    "G 1"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "13:10",
+   "fin": "14:10",
+   "matiere": "HIST.GEO.EN.MOR.CIV.",
+   "profs": [
+    "CARCANAGUE M."
+   ],
+   "groupe": null,
+   "salles": [
+    "A 15"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "14:10",
+   "fin": "15:05",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "SANCANDI C."
+   ],
+   "groupe": null,
+   "salles": [
+    "D 1"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "15:20",
+   "fin": "16:15",
+   "matiere": "DNL SVT",
+   "profs": [
+    "CHENAFI A."
+   ],
+   "groupe": "2DNL SV G1",
+   "salles": [
+    "A 11 Arts Appliqués"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "08:05",
+   "fin": "09:05",
+   "matiere": "SC.NUMERIQ.TECHNOL.",
+   "profs": [
+    "DE SIMONE K."
+   ],
+   "groupe": null,
+   "salles": [
+    "C 12"
+   ],
+   "quinzaine": "Q1",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "vendredi",
+   "debut": "08:05",
+   "fin": "09:05",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "SANCANDI C."
+   ],
+   "groupe": "2GT1 G1",
+   "salles": [
+    "D 1"
+   ],
+   "quinzaine": "Q2",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "vendredi",
+   "debut": "09:05",
+   "fin": "10:00",
+   "matiere": "ALLEMAND LV2",
+   "profs": [
+    "FOUQUERAY M."
+   ],
+   "groupe": "2GT1_ALLEMAND",
+   "salles": [
+    "G 2"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "10:15",
+   "fin": "11:15",
+   "matiere": "ANGLAIS LV1",
+   "profs": [
+    "BRUNNER M."
+   ],
+   "groupe": "ANG 2GT GP1",
+   "salles": [
+    "A 15"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "11:15",
+   "fin": "12:15",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "DE CARVALHO MARTINS M."
+   ],
+   "groupe": null,
+   "salles": [
+    "G 1"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "12:15",
+   "fin": "13:10",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "SANCANDI C."
+   ],
+   "groupe": null,
+   "salles": [
+    "D 1"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  }
+ ],
+ "warnings": [
+  "lundi 14:10–15:45 PHYSIQUE-CHIMIE : case à cheval sur un créneau, horaire interpolé",
+  "lundi 15:45–17:15 SCIENCES VIE & TERRE : case à cheval sur un créneau, horaire interpolé"
+ ]
+}

@@ -1,0 +1,580 @@
+{
+ "_source": "Transcrit à la main depuis le rendu du PDF (pas depuis la sortie du programme), validé par l'utilisateur le 2026-10-28",
+ "etablissement": "COLLEGE GOUNOD",
+ "creneaux": [
+  "08:00",
+  "08:55",
+  "09:50",
+  "10:05",
+  "11:00",
+  "11:55",
+  "12:50",
+  "13:25",
+  "14:20",
+  "15:15",
+  "15:30",
+  "16:25",
+  "17:20",
+  "18:00"
+ ],
+ "cours": [
+  {
+   "jour": "lundi",
+   "debut": "08:00",
+   "fin": "08:55",
+   "matiere": "HISTOIRE-GEOGRAPHIE",
+   "profs": [
+    "DESJARDINS D."
+   ],
+   "groupe": null,
+   "salles": [
+    "B21"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "lundi",
+   "debut": "08:55",
+   "fin": "09:50",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "LOIGNON V."
+   ],
+   "groupe": "3C-G2",
+   "salles": [
+    "A32"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "08:55",
+   "fin": "09:50",
+   "matiere": "TECHNOLOGIE",
+   "profs": [
+    "VITASOVIC L."
+   ],
+   "groupe": null,
+   "salles": [
+    "A23 T"
+   ],
+   "quinzaine": "B",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "10:05",
+   "fin": "11:00",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "CASTANT I."
+   ],
+   "groupe": "3C-G2",
+   "salles": [
+    "B05 P",
+    "B11"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "10:05",
+   "fin": "11:55",
+   "matiere": "ED.PHYSIQUE & SPORT.",
+   "profs": [
+    "BERGE E."
+   ],
+   "groupe": null,
+   "salles": [],
+   "quinzaine": "B",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "11:00",
+   "fin": "11:55",
+   "matiere": "ESPAGNOL LV2",
+   "profs": [
+    "PANIC E."
+   ],
+   "groupe": "3C-ESP2",
+   "salles": [
+    "A24 T"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "13:25",
+   "fin": "14:20",
+   "matiere": "SCIENCES VIE & TERRE",
+   "profs": [
+    "PIQUEMAL M."
+   ],
+   "groupe": null,
+   "salles": [
+    "A21 SC"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "13:25",
+   "fin": "14:20",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "LOIGNON V."
+   ],
+   "groupe": null,
+   "salles": [
+    "A32"
+   ],
+   "quinzaine": "B",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "lundi",
+   "debut": "14:20",
+   "fin": "15:15",
+   "matiere": "ALLEMAND LV2",
+   "profs": [
+    "GRUENAIS L."
+   ],
+   "groupe": "3ALL2",
+   "salles": [
+    "B04"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "lundi",
+   "debut": "15:30",
+   "fin": "17:20",
+   "matiere": "LANGUE & LITTÉRATURE",
+   "profs": [
+    "FORSHAW G."
+   ],
+   "groupe": "3C-G2",
+   "salles": [
+    "A31"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "08:00",
+   "fin": "08:55",
+   "matiere": "PHYSIQUE-CHIMIE",
+   "profs": [
+    "TOULOUSE G."
+   ],
+   "groupe": null,
+   "salles": [
+    "A22 SC"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "mardi",
+   "debut": "08:55",
+   "fin": "09:50",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "LOIGNON V."
+   ],
+   "groupe": null,
+   "salles": [
+    "A32"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "mardi",
+   "debut": "08:55",
+   "fin": "09:50",
+   "matiere": "ALLEMAND LV2",
+   "profs": [
+    "GRUENAIS L."
+   ],
+   "groupe": "3ALL2",
+   "salles": [
+    "B04"
+   ],
+   "quinzaine": "B",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "mardi",
+   "debut": "10:05",
+   "fin": "11:55",
+   "matiere": "LANGUE & LITTÉRATURE",
+   "profs": [
+    "FORSHAW G."
+   ],
+   "groupe": "3C-G2",
+   "salles": [
+    "A23 T"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "13:25",
+   "fin": "14:20",
+   "matiere": "ESPAGNOL LV2",
+   "profs": [
+    "PANIC E."
+   ],
+   "groupe": "3C-ESP2",
+   "salles": [
+    "A24 T"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "14:20",
+   "fin": "15:15",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "CASTANT I."
+   ],
+   "groupe": null,
+   "salles": [
+    "B11"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mardi",
+   "debut": "15:30",
+   "fin": "17:20",
+   "matiere": "DNL HG",
+   "profs": [
+    "PLECKO C."
+   ],
+   "groupe": "3C-G2",
+   "salles": [
+    "B04"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mercredi",
+   "debut": "08:00",
+   "fin": "08:55",
+   "matiere": "TECHNOLOGIE",
+   "profs": [
+    "VITASOVIC L."
+   ],
+   "groupe": null,
+   "salles": [
+    "A23 T"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mercredi",
+   "debut": "08:55",
+   "fin": "09:50",
+   "matiere": "PHYSIQUE-CHIMIE",
+   "profs": [
+    "TOULOUSE G."
+   ],
+   "groupe": null,
+   "salles": [
+    "A22 SC"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "mercredi",
+   "debut": "10:05",
+   "fin": "11:00",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "LOIGNON V."
+   ],
+   "groupe": null,
+   "salles": [
+    "A32"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "08:00",
+   "fin": "08:55",
+   "matiere": "ESPAGNOL LV2",
+   "profs": [
+    "PANIC E."
+   ],
+   "groupe": "3C-ESP2",
+   "salles": [
+    "A24 T"
+   ],
+   "quinzaine": "B",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "jeudi",
+   "debut": "08:55",
+   "fin": "09:50",
+   "matiere": "MATHEMATIQUES",
+   "profs": [
+    "LOIGNON V."
+   ],
+   "groupe": null,
+   "salles": [
+    "A32"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "10:05",
+   "fin": "11:00",
+   "matiere": "EDUCATION MUSICALE",
+   "profs": [
+    "GACHERE L."
+   ],
+   "groupe": null,
+   "salles": [
+    "A11 Mus."
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "11:00",
+   "fin": "11:55",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "CASTANT I."
+   ],
+   "groupe": null,
+   "salles": [
+    "B11"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "13:25",
+   "fin": "15:15",
+   "matiere": "ED.PHYSIQUE & SPORT.",
+   "profs": [
+    "BERGE E."
+   ],
+   "groupe": null,
+   "salles": [],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "jeudi",
+   "debut": "15:30",
+   "fin": "16:25",
+   "matiere": "HISTOIRE-GEOGRAPHIE",
+   "profs": [
+    "DESJARDINS D."
+   ],
+   "groupe": null,
+   "salles": [
+    "B21"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "08:00",
+   "fin": "08:55",
+   "matiere": "ESPAGNOL LV2",
+   "profs": [
+    "PANIC E."
+   ],
+   "groupe": "3C-ESP2",
+   "salles": [
+    "A24 T"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "vendredi",
+   "debut": "08:55",
+   "fin": "09:50",
+   "matiere": "SCIENCES VIE & TERRE",
+   "profs": [
+    "PIQUEMAL M."
+   ],
+   "groupe": null,
+   "salles": [
+    "A21 SC"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "10:05",
+   "fin": "11:00",
+   "matiere": "ARTS PLASTIQUES",
+   "profs": [
+    "TOUSSAINT B."
+   ],
+   "groupe": null,
+   "salles": [
+    "A37 Apla"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "13:25",
+   "fin": "14:20",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "CASTANT I."
+   ],
+   "groupe": null,
+   "salles": [
+    "B11"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "14:20",
+   "fin": "15:15",
+   "matiere": "FRANCAIS",
+   "profs": [
+    "CASTANT I."
+   ],
+   "groupe": null,
+   "salles": [
+    "B11"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  },
+  {
+   "jour": "vendredi",
+   "debut": "15:30",
+   "fin": "16:25",
+   "matiere": "ALLEMAND LV2",
+   "profs": [
+    "GRUENAIS L."
+   ],
+   "groupe": "3ALL2",
+   "salles": [
+    "A32"
+   ],
+   "quinzaine": null,
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": false
+  },
+  {
+   "jour": "vendredi",
+   "debut": "16:25",
+   "fin": "17:20",
+   "matiere": "ALLEMAND LV2",
+   "profs": [
+    "GRUENAIS L."
+   ],
+   "groupe": "3ALL2",
+   "salles": [
+    "A32"
+   ],
+   "quinzaine": "A",
+   "pictogramme": false,
+   "horaire_estime": false,
+   "demi_case": true
+  }
+ ]
+}
